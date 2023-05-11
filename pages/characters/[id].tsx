@@ -19,8 +19,6 @@ const CharacterPage = ({ character }: { character: Characters }) => {
         </div>
     )
 }
-
-
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const res = await fetch(`https://rickandmortyapi.com/api/character/${context.query.id}`);
     const character = await res.json();
